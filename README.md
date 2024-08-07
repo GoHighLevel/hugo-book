@@ -1,5 +1,7 @@
 # Hugo Book Theme
 
+Forked version for GHL
+
 [![Hugo](https://img.shields.io/badge/hugo-0.124-blue.svg)](https://gohugo.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Build with Hugo](https://github.com/alex-shpak/hugo-book/workflows/Build%20with%20Hugo/badge.svg)
