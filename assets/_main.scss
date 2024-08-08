@@ -190,6 +190,10 @@ body[dir="rtl"] .book-menu {
   margin: $padding-16 0;
   border-bottom: 1px solid transparent;
 
+  ul#book-search-results {
+    border-bottom: 1px solid var(--gray-200);
+  }
+
   input {
     width: 100%;
     padding: $padding-8;
@@ -203,6 +207,10 @@ body[dir="rtl"] .book-menu {
     &:required + .book-search-spinner {
       display: block;
     }
+  }
+  
+  input#book-search-input {
+      border: 1px solid red;
   }
 
   .book-search-spinner {
