@@ -9,6 +9,9 @@
       <span>{{ $date }}</span>
     </a>
   </div>
+  <div>
+    <p>Author: {{ .Params.Author }}</p>
+  </div>
 {{ end }}
 
 {{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
