@@ -1,0 +1,30 @@
+<script>
+    var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const globalColorMode = isDarkMode ? 'dark' : 'light'; // or you get it from some function/global state
+
+// https://github.com/giscus/giscus/issues/336#issuecomment-1007922777
+function changeGiscusTheme(theme) {
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.msgsndr.net');
+    }
+    sendMessage({
+      setConfig: {
+        theme: theme
+      }
+    });
+}
+
+// set giscus theme after giscus has been loaded
+function handleGiscusMessage(event) {
+    if (event.origin !== 'https://giscus.msgsndr.net') return;
+    if (!(typeof event.data === 'object' && event.data.giscus)) return;
+
+    // const giscusData = event.data.giscus;
+    changeGiscusTheme(globalColorMode);
+    window.removeEventListener('message', handleMessage);
+}
+
+window.addEventListener('message', handleGiscusMessage);
+</script>
