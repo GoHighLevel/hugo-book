@@ -23,7 +23,7 @@ function handleGiscusMessage(event) {
 
     // const giscusData = event.data.giscus;
     changeGiscusTheme(globalColorMode);
-    window.removeEventListener('message', handleMessage);
+    window.removeEventListener('message', handleGiscusMessage);
 }
 
 window.addEventListener('message', handleGiscusMessage);
