@@ -2,5 +2,14 @@
   "flowchart": {
     "useMaxWidth":true
   },
-  "theme": "default"
+  "theme": "base",
+  "themeVariables": {
+    "background": "#ffffff",
+    "primaryColor": "#e1f5ff",
+    "primaryTextColor": "#333333",
+    "primaryBorderColor": "#666666",
+    "lineColor": "#333333",
+    "secondaryColor": "#fff4e1",
+    "tertiaryColor": "#ffffff"
+  }
 }
